@@ -1,4 +1,4 @@
-# Langchain JS Samples
+# Langchain JS Recipes
 Simple projects built with Langchain JS, for educational copy-pasting/referencing
 
 ## First time setup
