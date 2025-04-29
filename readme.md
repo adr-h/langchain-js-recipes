@@ -12,9 +12,10 @@ The project assumes you have a working local Ollama setup, and that gemma3 has b
 1. Chatbot
    - `npx tsx src/chatbot`
    - A basic chatbot that continously takes user input and returns responses from an LLM
-<img src="src/chatbot/promo.png">
+   - <img src="src/chatbot/promo.png">
 
-1. Resume Parser
+
+2. Resume Parser
    - `npx tsx src/resume-parser`
    -  An intelligent resume parser, that takes an unstructured document (e.g: a PDF) and returns a structured JSON describing a candidate (e.g: an object with fields such as 'name', 'email', 'workExperience', 'education', etc), with full type validation via Zod.
-<img src="src/resume-parser/promo.png">
+   - <img src="src/resume-parser/promo.png">
