@@ -29,7 +29,9 @@ const model = new ChatOllama({
 });
 
 const structuredModel = model.withStructuredOutput(
-   z.object({ query: z.string().describe("Syntactically valid SQL query.") })
+   z.object({
+      query: z.string().describe("Syntactically valid SQL query.")
+   })
 );
 async function writeQuery(question: string) {
    const db = await getDb();
