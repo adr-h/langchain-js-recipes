@@ -19,3 +19,9 @@ The project assumes you have a working local Ollama setup, and that gemma3 has b
    - `npx tsx src/resume-parser`
    -  An intelligent resume parser, that takes an unstructured document (e.g: a PDF) and returns a structured JSON describing a candidate (e.g: an object with fields such as 'name', 'email', 'workExperience', 'education', etc), with full type validation via Zod.
    - <img src="src/resume-parser/promo.png">
+
+
+3. SQlite Answers
+   - `npx tsx src/sqlite-answers`
+   -  A simple Q&A system for an SQLite database. Ask it questions about the database in plain English, and it will generate + execute SQL to answer you.
+   - <img src="src/sqlite-answers/promo.png">
