@@ -28,11 +28,10 @@ const model = new ChatOllama({
    maxRetries: 2,
 });
 
-const structuredModel = model.withStructuredOutput(
-   z.object({
-      query: z.string().describe("Syntactically valid SQL query.")
-   })
-);
+const schema = z.object({
+   query: z.string().describe("Syntactically valid SQL query.")
+});
+
 async function writeQuery(question: string) {
    const db = await getDb();
 
@@ -43,7 +42,7 @@ async function writeQuery(question: string) {
       input: question,
     });
 
-    const result = await structuredModel.invoke(promptValue);
+    const result = await model.withStructuredOutput(schema).invoke(promptValue);
 
     return { query: result.query };
 }
